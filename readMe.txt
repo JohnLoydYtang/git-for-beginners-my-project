@@ -1,4 +1,4 @@
 Welcome to MyProject!
 
-Author: John Loyd Ytang
+Author: John Loyd Mahusay Ytang
 Twitter: I dont have a twitter
