@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Toggle</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+
+  .dark-mode {
+    background-color: #333; /* Dark mode background */
+  }
+
+  .light-mode {
+    background-color: #FFF; /* Light mode background */
+  }
+
+  .light-off, .light-on {
+    width: 100px;
+    height: 150px;
+    background-color: grey;
+    margin: 20px auto;
+    border-radius: 50% / 40%;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+  .light-on {
+    background-color: yellow;
+  }
+
+  .light-off::after, .light-on::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 50px;
+    background-color: #666;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+
+  .light-on::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 0, 0.5);
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 50%;
+    z-index: -1;
+  }
+</style>
+</head>
+<body class="dark-mode">
+
+<div id="light" class="light-off"></div>
+
+<script>
+document.getElementById('light').addEventListener('click', function() {
+  this.classList.toggle('light-on');
+  if (this.classList.contains('light-on')) {
+    document.body.classList.replace('dark-mode', 'light-mode');
+  } else {
+    document.body.classList.replace('light-mode', 'dark-mode');
+  }
+});
+</script>
+</body>
+</html>

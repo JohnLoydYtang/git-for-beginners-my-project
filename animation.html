@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Spinning Cube Animation</title>
+<style>
+  @keyframes spin {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: spin 4s linear infinite;
+    transform-style: preserve-3d;
+  }
+  .cube div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid #000;
+  }
+  .front  { transform: translateZ(50px); }
+  .back   { transform: rotateY(180deg) translateZ(50px); }
+  .right  { transform: rotateY(90deg) translateZ(50px); }
+  .left   { transform: rotateY(-90deg) translateZ(50px); }
+  .top    { transform: rotateX(90deg) translateZ(50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+</style>
+</head>
+<body>
+<div class="cube">
+  <div class="front"></div>
+  <div class="back"></div>
+  <div class="right"></div>
+  <div class="left"></div>
+  <div class="top"></div>
+  <div class="bottom"></div>
+</div>
+
+<script>
+  const cube = document.querySelector('.cube');
+  const faces = cube.querySelectorAll('div');
+  const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+
+  cube.addEventListener('animationiteration', () => {
+    // Change each face's color at each animation iteration
+    faces.forEach((face, index) => {
+      face.style.backgroundColor = colors[(index + Math.floor(Math.random() * colors.length)) % colors.length];
+    });
+  });
+</script>
+</body>
+</html>
