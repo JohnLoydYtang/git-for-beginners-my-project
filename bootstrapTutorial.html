@@ -651,7 +651,7 @@
     John Loyd Ytang
     -->
     <div class="container-fluid">
-        <h3>Navigation Bar</h3>
+        <h3>Navigation Bar (Adjust)</h3>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -816,6 +816,49 @@
                     <option value="1">7</option>
                     <option value="1">8</option>
                 </select>
+            </div>
+        </form>
+        <hr>
+    </div>
+
+    <!--Form Control States
+    Working: 2 Adjust: 3
+    Feb 2, 2024
+    John Loyd Ytang 
+    -->
+    <div class="container-fluid">
+        <h3>Horizontal Form: Control State</h3>
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label" for="focused">Focused
+                    <input class="form-control" id="focused" type="text" value="click to focused">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="disabled">Disabled
+                    <input type="text" class="form-control" id="disabled" type="text"
+                        placeholder="this text is disabled" disabled>
+                </label>
+            </div>
+            <div class="form-group has-success has-feedback">
+                <label for="success" class="control-label">Success (Adjust)
+                    <input type="text" class="form-control" id="success" placeholder="this text is for success">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"> </span>
+                </label>
+            </div>
+
+            <div class="form-group has-warning has-feedback">
+                <label for="warning" class="control-label" for="warning">Warning (Adjust)
+                    <input type="text" class="form-control" id="warning" placeholder="This text is for waning">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </label>
+            </div>
+
+            <div class="form-group has-error has-feedback">
+                <label for="error" class="control-label" for="errpr">Error (Adjust)
+                    <input type="text" class="form-control" id="error" placeholder="This text is for error">
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </label>
             </div>
         </form>
         <hr>
