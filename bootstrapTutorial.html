@@ -35,6 +35,35 @@
             width: 80%;
             margin: auto;
         }
+
+        body {
+            position: relative;
+        }
+
+        #section1 {
+            padding-top: 45px;
+            height: 500px;
+            background-color: cyan;
+        }
+
+
+        #section2 {
+            padding-top: 45px;
+            height: 500px;
+            background-color: yellow;
+        }
+
+        #section3 {
+            padding-top: 45px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        #section4 {
+            padding-top: 45px;
+            height: 500px;
+            background-color: magenta;
+        }
     </style>
 </head>
 
@@ -998,8 +1027,94 @@
         <hr>
     </div>
 
-    <!---->
+    <!--Tooltip
+    Working
+    Feb 3, 2024
+    John Loyd Ytang 
+    -->
+    <div class="container-fluid">
+        <h3>Tooltip (Working)</h3>
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Insert tip">Tool Tip</a>
+        <hr>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]'), tooltip();
+            });
+        </script>
+    </div>
 
+    <!--Pop-over
+    Working
+    Feb 3, 2024
+    John Loyd Ytang
+    -->
+    <div class="container-fluid">
+        <h3>--Pop-over (Working)</h3>
+        <a href="#" data-toggle="popover" title="Text Header" data-content="Sample Paragraph"
+            data-placement="right">Pop-over</a>
+
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+        <hr>
+    </div>
+
+    <!--Scrollspy
+    Not Working (Removed)
+    Feb 3, 2024
+    John Loyd Ytang
+    -->
+    <div class="container-fluid">
+        <h3>--Scrollspy</h3>
+        <!--Navbar-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+
+            <!--container-->
+            <div class="container-fluid">
+
+                <!--Collapse Icon-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">My Website</a>
+                </div>
+                <!--Navbar Links-->
+
+                <div class="collapse navbar-collapse" id="nav1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Link 1</a></li>
+                        <li><a href="#section2">Link 2</a></li>
+                        <li><a href="#section3">Link 3</a></li>
+                        <li><a href="#section4">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Content Section-->
+        <div id="#section1" class="container-fluid">
+            <h1>Link 1</h1>
+            <p>Content</p>
+        </div>
+        <div id="#section2" class="container-fluid">
+            <h1>Link 1</h1>
+            <p>Content</p>
+        </div>
+        <div id="#section3" class="container-fluid">
+            <h1>Link 1</h1>
+            <p>Content</p>
+        </div>
+        <div id="#section4" class="container-fluid">
+            <h1>Link 1</h1>
+            <p>Content</p>
+        </div>
+        <hr>
+    </div>
+    <h1 class="text-center">END</h1>
 </body>
 
 </html>
