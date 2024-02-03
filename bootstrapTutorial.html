@@ -30,6 +30,11 @@
         .bg3 {
             background-color: green;
         }
+
+        .carousel-inner>.item>img {
+            width: 80%;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -891,25 +896,25 @@
         <hr>
         <form action="" class="form-horizontal" role="form">
             <div class="form-group form-group-lg">
-                <label for="lg" class="control-label">Large</label>
+                <label for="lg" class="control-label">Large (Not Working)</label>
                 <input type="text" class="form-control" id="lg">
             </div>
             <div class="form-group form-group-sm">
-                <label for="sm" class="control-label">Small</label>
+                <label for="sm" class="control-label">Small (Not Working)</label>
                 <input type="text" class="form-control" id="sm">
             </div>
         </form>
         <hr>
         <div class="col-xs-2">
-            <label for="in1">col-xs-2</label>
+            <label for="in1">col-xs-2 (Not Working)</label>
             <input type="text" class="form-control" id="in1">
         </div>
         <div class="col-xs-3">
-            <label for="in1">col-xs-3</label>
+            <label for="in1">col-xs-3 (Not Working)</label>
             <input type="text" class="form-control" id="in2">
         </div>
         <div class="col-xs-2">
-            <label for="in1">col-xs-4</label>
+            <label for="in1">col-xs-4 (Not Working)</label>
             <input type="text" class="form-control" id="in3">
         </div>
 
@@ -917,7 +922,51 @@
         <hr>
     </div>
 
-    <!---->
+    <!--Carousel
+    Adjust (Glyphicons doesnt work)
+    Feb 3, 2024
+    John Loyd Ytang 
+    -->
+    <div class="container-fluid">
+        <h3>Carousel (Adjust , All --Glyphicons-- doesnt work)</h3>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!--Carousel Indicator-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0"></li>
+                <li data-target="#carousel" data-slide-to="1" class="active"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+            </ol>
+
+            <!--Wrapper for Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="Screenshot (1).png" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>SS 1</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="Adrian-Twarog-Organisation-System.png" width="450" height="340">
+                    <div class="carousel-caption">
+                        <h3>SS 2</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+            <!--Left & Right Control Lines-->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+        <hr>
+    </div>
+
+
 </body>
 
 </html>
